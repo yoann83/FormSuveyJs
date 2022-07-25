@@ -1,2 +1,2 @@
-# FormSuveyJs
+# form-surveyJs
 Created with CodeSandbox

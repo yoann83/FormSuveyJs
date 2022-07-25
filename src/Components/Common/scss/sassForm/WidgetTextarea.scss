@@ -1,0 +1,29 @@
+$blue_egerie: #274058;
+$orange_egerie: #e94e1b;
+$white_egerie: #fff;
+$success_egerie: #198754;
+$error_egerie: #FFBABB;
+$field_egerie : #f5f5f5;
+.Textarea-widget{
+  .textarea{
+    background-color: $field_egerie;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 0.5em;
+    svg,label{
+      color: $blue_egerie
+    }
+    textarea{
+      background-color: $field_egerie;
+      padding: 0.5em;
+      border:none;
+      display: flex;
+      min-height: 2em;
+      width: 100%;
+      font-size: inherit;
+      &::placeholder {
+        color: $blue_egerie;
+      }
+    }
+  }
+}
