@@ -11,6 +11,7 @@ import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
 import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
+
 /* style Custom */
 import "../../../scss/sassForm/_widgetMultiSelect.scss";
 
@@ -58,14 +59,20 @@ export class MultiSelect extends Survey.SurveyElementBase {
       }, 3000);
     };
     const handleChangeValue = (e) => {
+      console.log("hche");
       const {
         target: { value }
       } = e;
       this.question.setValueCore(e.target.value);
       this.setState({ choice: e.target.value });
-      this.setState({
-        personName: typeof value === "string" ? value.split(",") : value
-      });
+      this.setState(
+        {
+          personName: typeof value === "string" ? value.split(",") : value
+        },
+        () => {
+          console.log(this.state);
+        }
+      );
     };
 
     if (!this.question) return null;
@@ -85,10 +92,28 @@ export class MultiSelect extends Survey.SurveyElementBase {
               name={this.question.name}
               value={this.state.personName}
               onChange={handleChangeValue}
+              required={this.question.isRequired}
               renderValue={(selected) => (
                 <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
                   {selected.map((value) => (
-                    <Chip key={value} label={value} />
+                    <Chip
+                      key={value}
+                      label={value}
+                      onMouseDown={(e) => {
+                        selected.splice(selected.indexOf(value), 1);
+                        console.log(selected);
+                        this.setState(
+                          {
+                            personName: selected
+                          },
+                          () => {
+                            console.log(this.state);
+                          }
+                        );
+                        e.stopPropagation();
+                      }}
+                      onDelete={() => {}}
+                    />
                   ))}
                 </Box>
               )}
