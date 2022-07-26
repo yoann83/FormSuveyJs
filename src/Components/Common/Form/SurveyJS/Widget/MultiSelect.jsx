@@ -50,9 +50,12 @@ export class MultiSelect extends Survey.SurveyElementBase {
   }
 
   render() {
-    const handleClick = (newPlacement) => (e) => {
+    const handleClick = () => (e) => {
       this.setState({ anchorEl: e.currentTarget });
       this.setState({ open: !this.state.open });
+      setTimeout(() => {
+        this.setState({ open: !this.state.open });
+      }, 3000);
     };
     const handleChangeValue = (e) => {
       const {

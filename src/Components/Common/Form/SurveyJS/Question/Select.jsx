@@ -20,6 +20,9 @@ export default function Select(props) {
     setAnchorEl(event.currentTarget);
     setOpen((prev) => placement !== newPlacement || !prev);
     setPlacement(newPlacement);
+    setTimeout(() => {
+      setOpen((prev) => placement !== newPlacement || !prev);
+    }, 3000);
   };
 
   const [choice, setchoice] = useState("");

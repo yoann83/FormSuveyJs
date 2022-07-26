@@ -22,6 +22,9 @@ export default function Text(props) {
     setAnchorEl(event.currentTarget);
     setOpen((prev) => placement !== newPlacement || !prev);
     setPlacement(newPlacement);
+    setTimeout(() => {
+      setOpen((prev) => placement !== newPlacement || !prev);
+    }, 3000);
   };
 
   const [value, setValue] = React.useState(new Date());
