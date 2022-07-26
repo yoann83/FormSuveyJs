@@ -10,7 +10,7 @@ import Fade from "@mui/material/Fade";
 import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
 /* style Custom */
-import "../../../scss/sassForm/WidgetSelect.scss";
+import "../../../scss/sassForm/_widgetSelect.scss";
 
 export class SelectModel extends Survey.Question {
   //select type in json form to work

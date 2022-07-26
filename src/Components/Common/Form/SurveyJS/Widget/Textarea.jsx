@@ -8,7 +8,7 @@ import Popper from "@mui/material/Popper";
 
 import * as Survey from "survey-react";
 /* style Custom */
-import "../../../scss/sassForm/WidgetTextarea.scss";
+import "../../../scss/sassForm/_widgetTextarea.scss";
 
 export class TextModel extends Survey.Question {
   //select type in json form to work

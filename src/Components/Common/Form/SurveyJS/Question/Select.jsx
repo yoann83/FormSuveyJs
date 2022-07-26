@@ -9,7 +9,7 @@ import Fade from "@mui/material/Fade";
 import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
 /* style Overload */
-import "../../../scss/sassForm/QuestionSelect.scss";
+import "../../../scss/sassForm/_questionSelect.scss";
 
 export default function Select(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);

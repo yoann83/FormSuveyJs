@@ -12,7 +12,7 @@ import Popper from "@mui/material/Popper";
 import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
 /* style Custom */
-import "../../../scss/sassForm/WidgetMultiSelect.scss";
+import "../../../scss/sassForm/_widgetMultiSelect.scss";
 
 //box size for select
 const ITEM_HEIGHT = 35;
